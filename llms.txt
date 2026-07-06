@@ -1,0 +1,48 @@
+# Retrospective System for Claude Code
+
+A Claude Code command and skill suite for extracting maximum value from completed AI agent conversations — identifying mistakes, decisions, discoveries, recoveries, and reusable patterns, then persisting them as structured knowledge assets.
+
+## What it solves
+
+After finishing an important task in Claude Code, the conversation contains valuable lessons that are lost when the session ends. `/复盘` (retrospective) scans the entire conversation, applies domain-specific analysis lenses, cross-references existing knowledge, and writes structured memory files.
+
+## Key features
+
+- 7-domain coverage: experiment, data, coding, research, debugging, design, custom
+- Balanced anchoring: equal weight on problem identification and positive pattern capture
+- Solidified pattern lifecycle: incubation → validation → upgrade to daily rules
+- 12 preset degradation paths with general degradation rule for unknown exceptions
+- Closed-loop verification: tracks whether retro outputs are actually used in subsequent conversations
+- Domain skill auto-generation: when a new domain is encountered, searches industry best practices → structures → adversarial review → user confirmation → saves as skill
+
+## Architecture
+
+```
+/复盘 command (lightweight entry)
+  → Scan conversation (6 types of notable moments)
+  → Identify domains (7 domains + custom)
+  → Per-domain deep analysis (retro-<domain> skills)
+  → Cross-reference existing knowledge (7 relationship types)
+  → Persist findings (Rule/Lesson/Insight/Pattern/Action routing)
+  → Report + closed-loop verification
+```
+
+## Design principles
+
+- Quality-first: skills are polished once, benefit compound over time
+- Balanced anchoring: equal focus on problems AND reusable good practices
+- Industry experience over self-归纳: search before assuming
+- Both入库 (new knowledge) and 盘点 (maintaining existing knowledge)
+- Adversarial review built into every new skill creation
+- Gradual growth: domain skills accumulate through use
+
+## Files
+
+- `.claude/commands/复盘.md` — Main command
+- `.claude/skills/retro-experiment/SKILL.md` — ML experiment lens
+- `.claude/skills/retro-data/SKILL.md` — Data processing lens
+- `.claude/skills/retro-coding/SKILL.md` — Code quality lens
+- `.claude/skills/retro-research/SKILL.md` — Research lens
+- `.claude/skills/retro-debugging/SKILL.md` — Debugging lens
+- `.claude/skills/retro-design/SKILL.md` — Architecture/design lens
+- `docs/design.md` — Full design documentation
