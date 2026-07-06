@@ -1,6 +1,10 @@
 # 通用 AI Agent 复盘系统
 
+> **Claude Code Retrospective System** — After-Action Review for AI Agents
+
 在一个对话中完成重要任务后，输入 `/复盘`，榨干整个对话的价值——把经验教训、决策、错误、好做法、可复用模式全部挖出来，沉淀为知识资产。
+
+**关键词**: Claude Code Skill, Agent Retrospective, After-Action Review, Knowledge Management, 复盘, 知识沉淀, AI Agent 反思框架
 
 ## 快速开始
 
