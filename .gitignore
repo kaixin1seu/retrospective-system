@@ -13,3 +13,6 @@ __pycache__/
 # Temp
 *.tmp
 *.log
+
+# Competitor clones (reference only, not our code)
+research/competitors/
